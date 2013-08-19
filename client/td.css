@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background: #eeeeee;
+    color: #333333;
+    margin: 20px;
+    
+}
+
+body, input {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+input {
+    font-size: 100%;
+}
+
+a, a:visited, a:active {
+    color: #258;
+}
+
+h3 {
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 120%;
+    padding: 8px 6px;
+    text-align: center;
+}
+
+#new-item {
+	margin: 0.4em 0 0.8em;
+}
+#new-item, .add {
+	font-size: 2em;
+}
+.todo-item {
+	margin-top: 1px;
+	padding: 3px;
+	clear: both;
+}
+.item-text {
+	min-width: 200px;
+	float:left;
+	padding: 3px;
+	left: 70px;
+}
+.done, .remove {
+	cursor: pointer; 
+	color: #666;
+	font-size: 0.8em;
+	float:left;
+	font-weight: bold;
+	text-align: right;
+	padding: 3px;
+}
+.remove {color: #933;  display: none; }
+.done {margin-top: 7px; margin-right: 10px;}
+
+.todo-item:hover .remove { display: inline;} 
+.strike {text-decoration: line-through; color: #ccc;}

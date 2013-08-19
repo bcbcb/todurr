@@ -1,0 +1,74 @@
+<head>
+  <title>ToDurr</title>
+</head>
+
+<body>
+	{{#if currentUser}}Signed in as {{loginButtons}}{{/if}} 
+
+	<div class="app">
+		{{> hello }}
+	</div>
+
+  
+</body>
+
+<template name="hello">
+ 
+  {{#if currentUser}}
+  
+  <h1>{{user}}'s ToDo List</h1>
+  {{> box}}
+ 	<div id="data">{{> todos}}</div>
+
+  {{else}}  
+  <h1>ToDo List</h1>
+  <p>{{loginButtons}}</p>
+  {{/if}}
+ 
+</template>
+
+<template name="box">
+	<input type="text" id="new-item" placeholder="Add a todo item!"><button class="add">add</button>
+</template>
+
+<template name="todos">
+	
+	{{#each items}}
+		<ul>
+			{{> item}}
+		</ul>
+	{{/each}}
+
+	{{#each doneItems}}
+		<ul class="done-items">
+			{{> doneItem}}
+		</ul>
+	{{/each}}
+</template>
+
+
+<template name="item">
+	<li class="todo-item">
+		<div class="item-btns">
+			<input type="checkbox" class="done">
+		</div>
+		<div class="item-text">
+				{{ text }}
+		</div>
+		<div class="remove">[x]</div>
+
+	</li>
+</template>
+
+<template name="doneItem">
+	<li class="todo-item">
+		<div class="item-btns">
+			<input type="checkbox" class="done" checked>
+			
+		</div>
+		<div class="strike item-text">
+				{{ text }}
+		</div>
+		<div class="remove">[x]</div>
+	</li>
+</template>
